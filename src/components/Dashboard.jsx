@@ -8,13 +8,14 @@ const Dashboard = () => {
         const checkTokenCookie = () => {
             const tokenCookie = document.cookie.split('; ').find(row => row.startsWith('token='));
             console.log(tokenCookie, 'tokenCookie');
+            console.log(document.cookie, 'document.cookie')
             if (!tokenCookie) {
-                navigate('/');
+                // navigate('/');
             }
         };
 
         checkTokenCookie();
-    }, [navigate]);
+    }, []);
 
     const logout = async () => {
         try {
