@@ -1,0 +1,4 @@
+[[redirects]]                # Defines redirects for client-side routing
+  from = "/*"                # Matches any path
+  to = "/index.html"         # Redirects to the index.html (React Router)
+  status = 200               # Sets the status code for the redirect
