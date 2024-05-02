@@ -13,7 +13,7 @@ function LoginPage() {
     setLoading(true);
     const checkLoginStatus = async () => {
       try {
-        const response = await fetch('http://localhost:4010/checkLoggedIn', { credentials: 'include', });
+        const response = await fetch('https://common-exp.onrender.com/checkLoggedIn', { credentials: 'include', });
         if (response.ok) {
           setLoggedIn(true);
         } else {
@@ -40,7 +40,7 @@ function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:4010/login', {
+      const response = await fetch('https://common-exp.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
