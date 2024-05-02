@@ -13,7 +13,7 @@ function LoginPage() {
     setLoading(true);
     const checkLoginStatus = async () => {
       try {
-        const response = await fetch('http://localhost:4000/checkLoggedIn', { credentials: 'include', });
+        const response = await fetch('https://api.favinsta.com/checkLoggedIn', { credentials: 'include', });
         if (response.ok) {
           setLoggedIn(true);
         } else {
@@ -40,7 +40,7 @@ function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:4000/login', {
+      const response = await fetch('https://api.favinsta.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
