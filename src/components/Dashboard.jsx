@@ -10,7 +10,7 @@ const Dashboard = () => {
             console.log(tokenCookie, 'tokenCookie');
             console.log(document.cookie, 'document.cookie')
             if (!tokenCookie) {
-                // navigate('/');
+                navigate('/');
             }
         };
 
