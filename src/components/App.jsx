@@ -13,7 +13,7 @@ function LoginPage() {
     setLoading(true);
     const checkLoginStatus = async () => {
       try {
-        const response = await fetch('https://api.favinsta.com/checkLoggedIn'/* , { credentials: 'include', } */);
+        const response = await fetch('https://api.favinsta.com/checkLoggedIn', { credentials: 'include', });
         if (response.ok) {
           setLoggedIn(true);
         } else {
@@ -45,7 +45,7 @@ function LoginPage() {
         headers: {
           'Content-Type': 'application/json'
         },
-        // credentials: 'include',
+        credentials: 'include',
         body: JSON.stringify({
           email: email,
           password: password
